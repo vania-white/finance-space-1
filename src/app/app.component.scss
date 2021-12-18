@@ -1,0 +1,12 @@
+::ng-deep {
+  & .sidebar ul {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  & .p-tabmenu .p-tabmenu-nav {
+    border-width: 2px;
+  }
+}

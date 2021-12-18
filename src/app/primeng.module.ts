@@ -33,6 +33,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TagModule } from 'primeng/tag';
+import {TabMenuModule} from 'primeng/tabmenu';
 
 
 const PRIMENG_MODULES = [
@@ -44,7 +45,6 @@ const PRIMENG_MODULES = [
   ButtonModule,
   RadioButtonModule,
   DropdownModule,
-  // CalendarModule,
   CheckboxModule,
   MultiSelectModule,
   TagModule,
@@ -68,21 +68,12 @@ const PRIMENG_MODULES = [
   PickListModule,
   FlexModule,
   ToolbarModule,
-  // AutonumericModule,
   TooltipModule,
-  // DialogControlsModule,
-  // FormControlModule,
-  // PipesModule,
   TreeModule,
   PasswordModule,
   ConfirmDialogModule,
-  // DirectivesModule,
   FileUploadModule,
-  // DirectivesModule,
-  // FxTextareaModule,
-  // FXConfirmDialogModule,
-  // FXMenuWrapperModule,
-  // ButtonSwitchModule
+  TabMenuModule
 ];
 
 @NgModule({
