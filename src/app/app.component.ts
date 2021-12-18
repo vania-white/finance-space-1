@@ -24,22 +24,22 @@ export class AppComponent implements OnInit {
     this.items = [
       {
         label: 'Accounts',
-        icon: 'pi pi-fw pi-home',
+        icon: 'pi pi-fw pi-credit-card',
         routerLink: ROUTER.ACCOUNTS,
       },
       {
         label: 'Categories',
-        icon: 'pi pi-fw pi-calendar',
+        icon: 'pi pi-fw pi-chart-pie',
         routerLink: ROUTER.CATEGORIES,
       },
       {
         label: 'Operations',
-        icon: 'pi pi-fw pi-pencil',
+        icon: 'pi pi-fw pi-book',
         routerLink: ROUTER.OPERATIONS,
       },
       {
         label: 'Statistics',
-        icon: 'pi pi-fw pi-file',
+        icon: 'pi pi-fw pi-chart-bar',
         routerLink: ROUTER.STATISTICS,
       },
     ];
