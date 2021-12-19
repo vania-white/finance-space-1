@@ -1,0 +1,17 @@
+::ng-deep {
+  & .sidebar ul {
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  & .p-tabmenu .p-tabmenu-nav {
+    border-width: 0;
+    border-right: 2px solid #dee2e6;
+
+    & .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,12 +1,29 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuItem} from "primeng/api";
+// import {HttpClient} from "@angular/common/http";
+import {Observable, Subscriber} from "rxjs";
 
-enum ROUTER {
-  ACCOUNTS = '/accounts',
-  CATEGORIES = '/categories',
-  OPERATIONS = '/operations',
-  STATISTICS = '/statistics',
-}
+// class User {
+//   email!: string;
+//   password!: string;
+//   name!: string;
+//   lastname!: string;
+//   __id!: string;
+// }
+
+// class MyHttpClient {
+//   get<T>(url: string): Observable<T> {
+//     return new Observable<T>((subscriber: Subscriber<T>) => {
+//       const xhr: XMLHttpRequest = new XMLHttpRequest();
+//       xhr.addEventListener('load', (e: ProgressEvent<XMLHttpRequestEventTarget>) => {
+//         subscriber.next(xhr.response);
+//         subscriber.complete();
+//       });
+//       xhr.addEventListener('error', (e: ProgressEvent<XMLHttpRequestEventTarget>) => subscriber.error(e));
+//       xhr.open('GET', url);
+//       xhr.send();
+//     });
+//   }
+// }
 
 @Component({
   selector: 'app-root',
@@ -15,38 +32,23 @@ enum ROUTER {
 })
 export class AppComponent implements OnInit {
 
-  items: MenuItem[] | undefined;
-  activeItem: MenuItem | undefined;
+  // private readonly myHttp: MyHttpClient;
 
-  constructor() {}
+  constructor(
+    // private http: HttpClient
+  ) {
+    // this.myHttp = new MyHttpClient();
+  }
 
   ngOnInit(): void {
-    this.items = [
-      {
-        label: 'Accounts',
-        icon: 'pi pi-fw pi-credit-card',
-        routerLink: ROUTER.ACCOUNTS,
-      },
-      {
-        label: 'Categories',
-        icon: 'pi pi-fw pi-chart-pie',
-        routerLink: ROUTER.CATEGORIES,
-      },
-      {
-        label: 'Operations',
-        icon: 'pi pi-fw pi-book',
-        routerLink: ROUTER.OPERATIONS,
-      },
-      {
-        label: 'Statistics',
-        icon: 'pi pi-fw pi-chart-bar',
-        routerLink: ROUTER.STATISTICS,
-      },
-    ];
-
-    if (document.location.pathname === ROUTER.ACCOUNTS) this.activeItem = this.items[0];
-    if (document.location.pathname === ROUTER.CATEGORIES) this.activeItem = this.items[1];
-    if (document.location.pathname === ROUTER.OPERATIONS) this.activeItem = this.items[2];
-    if (document.location.pathname === ROUTER.STATISTICS) this.activeItem = this.items[3];
+    // console.log(this.activeItem);
+    //
+    // this.http.get('http://192.168.50.71/users/61882d16562ee80bf2f4e715').subscribe(
+    //   response => console.log('its response ' + response),
+    //   err => console.log(err.error.message),
+    //   () => console.log('its complete')
+    // );
+    //
+    // this.myHttp.get('http://192.168.50.71/users').subscribe(console.log)
   }
 }

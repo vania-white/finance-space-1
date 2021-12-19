@@ -1,23 +1,10 @@
 <div fxFlex="100%" class="content">
 
-  <div class="content-header">
-<!--    header-component-->
-  </div>
+  <app-header></app-header>
 
-  <div class="content-sidebar">
-    <p-tabMenu
-      fxFlex="15%"
-      class="sidebar"
-      *ngIf="items && activeItem"
-      [model]="items"
-      [activeItem]="activeItem"
-    ></p-tabMenu>
-    <router-outlet></router-outlet>
-  </div>
+  <app-sidebar></app-sidebar>
 
-  <div class="content-footer">
-<!--    content-footer-->
-  </div>
+  <app-footer></app-footer>
 
 </div>
 
