@@ -1,6 +1,27 @@
 import {Component, OnInit} from '@angular/core';
-// import {HttpClient} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Observable, Subscriber} from "rxjs";
+
+interface LogSmthng {
+  log(data: string): void;
+}
+
+abstract class AbsctractLogSmthng {
+  abstract log1(data: string): void;
+}
+
+class Test extends AbsctractLogSmthng implements LogSmthng{
+  log(data: string): void {
+    console.log(data);
+  }
+
+  log1(data: string): void {
+    console.log(data);
+  }
+}
+
+const test = new Test();
+test.log1('1');
 
 // class User {
 //   email!: string;
@@ -35,7 +56,7 @@ export class AppComponent implements OnInit {
   // private readonly myHttp: MyHttpClient;
 
   constructor(
-    // private http: HttpClient
+    private http: HttpClient
   ) {
     // this.myHttp = new MyHttpClient();
   }
