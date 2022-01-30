@@ -1,12 +1,9 @@
 import {
-  ActionReducer,
   ActionReducerMap,
-  createFeatureSelector,
-  createSelector,
   MetaReducer
 } from '@ngrx/store';
 import { environment } from '../../../environments/environment';
-import {COUNTER_KEY, counterReducer, ICounterState} from "./counter";
+import {COUNTER_KEY, counterReducer, ICounterState} from "./counter/counter.reducer";
 
 export interface State {
   [COUNTER_KEY]: ICounterState;

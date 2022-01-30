@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {Store} from "@ngrx/store";
-import {clear, countSelector, decrease, increase, updatedAtSelector} from "../../common/reducers/counter";
 import {map} from "rxjs/operators";
+import {countSelector, updatedAtSelector} from "../../common/reducers/counter/counter.selectors";
+import {clear, decrease, increase} from "../../common/reducers/counter/counter.actions";
 
 @Component({
   selector: 'app-accounts',
