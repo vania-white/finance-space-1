@@ -5,22 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrimengModule } from "./primeng.module";
 import {HttpClientModule} from "@angular/common/http";
-import {SidebarComponent} from "./common/components/sidebar/sidebar.component";
-import {HeaderComponent} from "./common/components/header/header.component";
-import {FooterComponent} from "./common/components/footer/footer.component";
+
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './common/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
+import {LayoutComponent} from "./pages/layout/layout.component";
+import {SidebarComponent} from "./pages/layout/components/sidebar/sidebar.component";
+import {HeaderComponent} from "./pages/layout/components/header/header.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    LayoutComponent,
     SidebarComponent,
     HeaderComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,

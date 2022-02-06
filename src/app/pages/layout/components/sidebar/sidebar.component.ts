@@ -2,10 +2,10 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {MenuItem} from "primeng/api";
 
 enum ROUTER {
-  ACCOUNTS = '/accounts',
-  CATEGORIES = '/categories',
-  OPERATIONS = '/operations',
-  STATISTICS = '/statistics',
+  ACCOUNTS = 'accounts',
+  CATEGORIES = 'categories',
+  OPERATIONS = 'operations',
+  STATISTICS = 'statistics',
 }
 
 @Component({
@@ -43,8 +43,12 @@ export class SidebarComponent implements OnInit {
 
   constructor() {
     this.activeItem = this.items
-      .find(item => document.location.pathname === `/${item.label?.toLowerCase()}`) ?? this.items[0];
+      .find(item => document.location.pathname === `/pages/${item.label?.toLowerCase()}`) ?? this.items[0];
   }
 
   ngOnInit(): void {}
+
 }
+
+
+

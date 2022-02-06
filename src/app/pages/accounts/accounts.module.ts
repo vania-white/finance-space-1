@@ -4,7 +4,6 @@ import {AccountsComponent} from "./accounts.component";
 import {RouterModule} from "@angular/router";
 
 
-
 @NgModule({
   declarations: [
     AccountsComponent
